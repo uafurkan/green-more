@@ -46,7 +46,7 @@ export default function MenuPage() {
               className="overflow-hidden rounded-[26px] border border-gm-ink/[0.09] bg-gm-cream transition-transform duration-250 ease-out hover:-translate-y-1.5 hover:shadow-[0_26px_50px_-30px_rgba(13,26,17,0.55)]"
             >
               <div className="relative h-[230px]">
-                <ImagePlaceholder label="Tabak fotoğrafı" />
+                <ImagePlaceholder label="Tabak fotoğrafı" src={d.image} />
                 <div className="pointer-events-none absolute left-3 top-3 rounded-full bg-gm-lime px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.06em]">
                   {d.tag}
                 </div>

@@ -1,10 +1,28 @@
+import Image from "next/image";
+
 export default function ImagePlaceholder({
   label,
   dark = false,
+  src,
+  sizes,
 }: {
   label: string;
   dark?: boolean;
+  src?: string;
+  sizes?: string;
 }) {
+  if (src) {
+    return (
+      <Image
+        src={src}
+        alt={label}
+        fill
+        sizes={sizes ?? "(max-width: 768px) 100vw, 33vw"}
+        className="object-cover"
+      />
+    );
+  }
+
   return (
     <div
       className={`absolute inset-0 grid place-items-center ${

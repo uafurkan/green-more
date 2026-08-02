@@ -31,7 +31,7 @@ export default function MorePage() {
             className={`rounded-[26px] p-[clamp(22px,2.4vw,32px)] ${variantClasses[sv.variant]}`}
           >
             <div className="relative mb-5 h-[150px] overflow-hidden rounded-[20px] bg-black/[0.07]">
-              <ImagePlaceholder label="Görsel" />
+              <ImagePlaceholder label="Görsel" src={sv.image} />
             </div>
             <h3 className="mb-2.5 font-display text-[clamp(22px,2.4vw,30px)] font-bold tracking-[-0.03em]">
               {sv.title}

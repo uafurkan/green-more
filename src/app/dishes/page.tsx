@@ -24,7 +24,7 @@ export default function DishesPage() {
             className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center gap-[clamp(22px,3vw,54px)]"
           >
             <div className="relative h-[clamp(280px,34vw,440px)] overflow-hidden rounded-[32px]">
-              <ImagePlaceholder label="İmza tabak fotoğrafı" />
+              <ImagePlaceholder label="İmza tabak fotoğrafı" src={s.image} sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
             <div>
               <div className="font-display text-sm font-extrabold tracking-[0.08em] text-gm-orange">
