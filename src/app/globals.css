@@ -23,26 +23,28 @@
   --font-serif-italic: var(--font-instrument-serif);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  background: var(--gm-bg);
-  color: var(--gm-ink);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+  body {
+    background: var(--gm-bg);
+    color: var(--gm-ink);
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
 
-a {
-  color: var(--gm-green);
-  text-decoration: none;
-}
+  a {
+    color: var(--gm-green);
+    text-decoration: none;
+  }
 
-::selection {
-  background: var(--gm-lime);
-  color: var(--gm-ink);
+  ::selection {
+    background: var(--gm-lime);
+    color: var(--gm-ink);
+  }
 }
 
 @keyframes gmMarquee {
