@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FOOTER } from "@/data/site";
+import { FOOTER, LEGAL } from "@/data/site";
 
 export default function Footer() {
   return (
@@ -34,7 +34,16 @@ export default function Footer() {
       </div>
       <div className="mx-auto flex max-w-[1440px] flex-wrap justify-between gap-3 border-t border-gm-bg/[0.14] px-[clamp(18px,3vw,44px)] py-[22px] pb-10 text-[13px] text-gm-bg/50">
         <span>© 2026 green&amp;more</span>
-        <span>Gizlilik · Kullanım Koşulları · Çerezler</span>
+        <span className="flex flex-wrap gap-x-2 gap-y-1">
+          {LEGAL.map((l, i) => (
+            <span key={l.href} className="flex items-center gap-2">
+              <Link href={l.href} className="transition-colors hover:text-gm-lime">
+                {l.label}
+              </Link>
+              {i < LEGAL.length - 1 && <span>·</span>}
+            </span>
+          ))}
+        </span>
       </div>
     </footer>
   );

@@ -113,6 +113,44 @@ export const APP_FEATURES = [
   { title: "Sezon menüsüne erken erişim", body: "Yeni tabaklar üyelere bir hafta önce açılır." },
 ];
 
+export const ALLERGENS: Record<string, string[]> = {
+  "d-nar": ["Susam (tahin)", "Kuruyemiş (ceviz)"],
+  "d-sezar": ["Süt ürünü (parmesan)", "Gluten (kruton)"],
+  "d-avokado": ["Soya (edamame)"],
+  "d-mercimek": ["Süt ürünü (feta)"],
+  "d-tavuk": ["Süt ürünü (yoğurt)"],
+  "d-freekeh": ["Süt ürünü (keçi peyniri)", "Gluten (freekeh)"],
+  "d-somon": ["Balık", "Susam", "Soya (miso)"],
+  "d-mantar": ["Soya (tofu, miso)", "Susam"],
+  "d-kofte": ["Gluten (bulgur)", "Süt ürünü (yoğurt)"],
+  "d-focaccia": ["Gluten"],
+  "d-patates": ["Hardal"],
+  "d-corba": ["Kereviz"],
+  "d-hibiskus": [],
+  "d-yesil": [],
+  "d-kombu": [],
+  "d-tahinli": ["Susam (tahin)", "Kuruyemiş (fındık)"],
+  "d-chia": ["Kuruyemiş (Antep fıstığı)", "Hindistan cevizi"],
+};
+
+export const CAREERS = [
+  { slug: "mutfak", title: "Mutfak Ekibi", location: "Nişantaşı, Kanyon, Moda", type: "Tam zamanlı", body: "Günlük sos ve tabak hazırlığı; soğuk ve sıcak mutfak istasyonlarında rotasyon." },
+  { slug: "tezgah", title: "Tezgâh Sorumlusu", location: "Tüm şubeler", type: "Tam zamanlı / Yarı zamanlı", body: "Sipariş karşılama, tabak kurulumu ve müşteri deneyiminden sorumlu ön saf ekibi." },
+  { slug: "sube-muduru", title: "Şube Müdürü", location: "Çukurambar, Alsancak", type: "Tam zamanlı", body: "Vardiya planlama, stok yönetimi ve ekip performansından sorumlu şube liderliği." },
+  { slug: "lojistik", title: "Lojistik & Catering Koordinatörü", location: "Merkez ofis, İstanbul", type: "Tam zamanlı", body: "Ofis teslimatı ve catering siparişlerinin planlanması, şubeler arası koordinasyon." },
+  { slug: "urun-gelistirme", title: "Ürün Geliştirme Şefi", location: "Merkez mutfak, İstanbul", type: "Tam zamanlı", body: "Sezonluk menü tasarımı, tarif standardizasyonu ve tedarikçi seçimi." },
+];
+
+export const FAQ = [
+  { q: "Siparişimi ne kadar sürede alırım?", a: "Yoğun öğle saatlerinde bile ortalama teslim süremiz 6 dakikadır. Uygulamadan sipariş verirsen hazır olduğunda bildirim alırsın." },
+  { q: "Alerjenler hakkında bilgi nereden bulabilirim?", a: "Her tabağın alerjen listesi menü kartında ve Alerjen Rehberi sayfamızda ayrıntılı olarak yer alır. Şüpheli bir durumda şubedeki ekibimize sorabilirsin." },
+  { q: "Tabakları kişiselleştirebilir miyim?", a: "Evet. Uygulamada ya da tezgâhta malzeme çıkarma, ekleme ve sos değişikliği yapabilirsin, ekstra ücret sadece eklenen malzemeler için geçerlidir." },
+  { q: "Club üyeliği nasıl çalışır?", a: "Her 6. tabak bizden; puanların otomatik işlenir, ayrıca yeni sezon menüsüne üyeler bir hafta erken erişir." },
+  { q: "Catering siparişi için ne kadar önceden haber vermeliyim?", a: "10-400 kişilik kurulumlar için en az 48 saat önceden İletişim sayfasından teklif talep etmen yeterli." },
+  { q: "Hediye kartımı nasıl kullanırım?", a: "Hediye kartındaki kodu uygulamada ya da tezgâhta siparişine uygulayabilirsin; bakiye tükenene kadar geçerlidir." },
+  { q: "Şubeniz olmayan bir bölgeye açılmayı düşünüyor musunuz?", a: "Evet, yeni şube kararlarını topluluk oylarına göre veriyoruz. Şubeler sayfasından mahallen için oy verebilirsin." },
+];
+
 export const CONTACTS = [
   { title: "Genel", body: "Her konuda ilk durak. Hafta içi 09:00–19:00.", value: "merhaba@greenandmore.co" },
   { title: "Catering & Ofis", body: "Teklif, menü kurgusu ve teslimat programı.", value: "catering@greenandmore.co" },
@@ -130,13 +168,19 @@ export const FOOTER = [
   { title: "Kurum", items: [
     { label: "Hikâye & Vizyon", href: "/story" },
     { label: "&more servisleri", href: "/more" },
-    { label: "Kariyer", href: "/contact" },
+    { label: "Kariyer", href: "/career" },
     { label: "İletişim", href: "/contact" },
   ] },
   { title: "Destek", items: [
-    { label: "Alerjen rehberi", href: "/menu" },
+    { label: "Alerjen rehberi", href: "/allergens" },
     { label: "Catering teklifi", href: "/contact" },
-    { label: "Hediye kartı", href: "/more" },
-    { label: "Sıkça sorulanlar", href: "/contact" },
+    { label: "Hediye kartı", href: "/gift-card" },
+    { label: "Sıkça sorulanlar", href: "/faq" },
   ] },
+];
+
+export const LEGAL = [
+  { label: "Gizlilik", href: "/privacy" },
+  { label: "Kullanım Koşulları", href: "/terms" },
+  { label: "Çerezler", href: "/cookies" },
 ];
