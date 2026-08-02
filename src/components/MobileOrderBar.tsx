@@ -26,7 +26,7 @@ export default function MobileOrderBar() {
           Sipariş ver
         </Link>
       </div>
-      <div className="h-[76px]" />
+      <div className="h-[76px] bg-gm-ink" />
     </>
   );
 }
