@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Wordmark from "@/components/Wordmark";
 import { NAV } from "@/data/site";
 
 export default function Header() {
@@ -16,9 +17,7 @@ export default function Header() {
           <span className="grid h-[30px] w-[30px] flex-none place-items-center rounded-full bg-gm-green">
             <span className="block h-[13px] w-[13px] -rotate-[20deg] rounded-[50%_0_50%_50%] bg-gm-lime" />
           </span>
-          <span className="font-display text-[clamp(19px,2.2vw,23px)] font-extrabold tracking-[-0.03em] text-gm-ink">
-            green<span className="text-gm-orange">&amp;</span>more
-          </span>
+          <Wordmark className="font-display text-[clamp(19px,2.2vw,23px)] font-extrabold tracking-[-0.03em] text-gm-ink" />
         </Link>
 
         <nav className="hidden items-center gap-[clamp(10px,1.5vw,24px)] text-[15px] font-medium md:flex">

@@ -62,6 +62,64 @@
   to { opacity: 1; transform: none; }
 }
 
+/* Logo wordmark: "green&more" folds down to "g&m" and opens back up, once
+   every 15s. Widths animate via the 1fr -> 0fr grid track so each glyph
+   collapses to exactly its own width, whatever the font metrics are. */
+@keyframes gmFold {
+  0%,
+  60% {
+    grid-template-columns: 1fr;
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  }
+  64%,
+  74% {
+    grid-template-columns: 0fr;
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.22, 0.9, 0.28, 1);
+  }
+  80%,
+  100% {
+    grid-template-columns: 1fr;
+    opacity: 1;
+  }
+}
+
+.gm-wordmark-slot {
+  display: inline-grid;
+  justify-items: start;
+}
+
+.gm-wordmark-slot > * {
+  grid-area: 1 / 1;
+}
+
+.gm-wordmark-ghost {
+  visibility: hidden;
+}
+
+.gm-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.gm-fold {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  animation: gmFold 15s infinite;
+}
+
+.gm-fold > span {
+  min-width: 0;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gm-fold {
+    animation: none;
+  }
+}
+
 .gm-marquee {
   animation: gmMarquee 34s linear infinite;
 }
