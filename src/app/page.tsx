@@ -148,12 +148,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-5">
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="font-display text-[22px] font-bold tracking-[-0.03em]">
-                    {d.name}
-                  </h3>
-                  <span className="whitespace-nowrap text-[17px] font-bold">{d.price}</span>
-                </div>
+                <h3 className="font-display text-[22px] font-bold tracking-[-0.03em]">
+                  {d.name}
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-gm-ink/62">{d.desc}</p>
                 <div className="mt-3.5 text-xs font-bold uppercase tracking-[0.06em] text-gm-ink/42">
                   {d.meta}
