@@ -16,8 +16,7 @@ export default function MenuPage() {
           Hepsi burada.
         </h1>
         <p className="mt-5 max-w-[56ch] text-[clamp(16px,1.5vw,20px)] leading-relaxed text-gm-ink/70">
-          Fiyatlar tüm şubelerde geçerlidir. Her tabak kişiselleştirilebilir; alerjen
-          bilgisi kartın detayında yazar.
+          Her tabak kişiselleştirilebilir; alerjen bilgisi kartın detayında yazar.
         </p>
         <div className="my-[clamp(26px,3vw,44px)] flex flex-wrap gap-2.5">
           {TABS.map((t) => {
@@ -52,12 +51,9 @@ export default function MenuPage() {
                 </div>
               </div>
               <div className="p-[22px]">
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="font-display text-[23px] font-bold tracking-[-0.03em]">
-                    {d.name}
-                  </h3>
-                  <span className="whitespace-nowrap text-[17px] font-bold">{d.price}</span>
-                </div>
+                <h3 className="font-display text-[23px] font-bold tracking-[-0.03em]">
+                  {d.name}
+                </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-gm-ink/62">{d.desc}</p>
                 <div className="mt-4 flex items-center justify-between gap-2.5">
                   <span className="text-xs font-bold uppercase tracking-[0.06em] text-gm-ink/42">
