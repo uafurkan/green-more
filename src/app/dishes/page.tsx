@@ -50,9 +50,6 @@ export default function DishesPage() {
                 ))}
               </div>
               <div className="mt-[26px] flex flex-wrap items-center gap-[18px]">
-                <span className="font-display text-[26px] font-extrabold tracking-[-0.03em]">
-                  {s.price}
-                </span>
                 <Link
                   href="/menu"
                   className="rounded-full bg-gm-green px-[26px] py-3.5 font-bold text-gm-bg transition-colors hover:bg-gm-ink"
